@@ -1,1 +1,6 @@
 # STUDY-DOCUMENTATION
+
+
+
+## SQL
+## VUE.js 
