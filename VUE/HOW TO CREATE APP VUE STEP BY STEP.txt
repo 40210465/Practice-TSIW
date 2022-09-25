@@ -1,0 +1,10 @@
+1º
+-nmp install @vue3CLI -g
+
+2º
+open the GUI of VUE to create your project and to start developing
+by inserting the command on the CMD windows or in a terminal of a ID for instance
+VSCODE : 
+
+> vue ui 
+
