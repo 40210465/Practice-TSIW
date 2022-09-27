@@ -39,7 +39,14 @@ on the output we can run your app on local or network option
 ------------------------------------------------------------------------
 app.vue IT´S THE MAIN FILE, IT HOLDS ALL THE APP YOUR CREATING 
 
+=> Every Vue file haves a single file component, each means we work HTML CSS AND JS
+in the same file : 
 
+<template></template> HTML
+<script></script> JS
+<style></style> CSS
+------------------------------------------------------------------------------
 
+https://www.youtube.com/watch?v=ZqgiuPt5QZo&list=PLvEpsAz1iddQaMLerXEn2ZLhnnEJk-EEZ&index=164&t=1640s
 
 
