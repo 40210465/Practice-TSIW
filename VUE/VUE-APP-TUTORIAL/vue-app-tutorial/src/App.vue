@@ -5,7 +5,7 @@
 
 <div id="app-container">
 
-  WELCOME @{{ user.userName }} - {{fullName}}
+ @{{ user.userName }} - {{fullName}}
       <span class="followers"> <strong>Followers :</strong>{{this.followers}}</span>&ensp;
 
   <!-- WE CAN TRIGGER EVENTS IN TWO WAYS : @eventName="method_property" OR v-on:eventName="method_property" -->
@@ -41,8 +41,7 @@ export default {
       age: 21,
       email : 'pedromst2000@gmail.com',
       // TO CHECK IF HIS THE ADMIN OF THE APPLICATION 
-      isAdmin: true,
-      isFollow: false
+      isAdmin: true
     }
   }
 },
@@ -65,12 +64,13 @@ export default {
   // IN ORDER TO TRIGGER methods properties we need events such as onclick events for instance
   methods: {
     Follow(){
-      this.followers++
-      this.isFollow = true
-      console.log(this.isFollow);
-      if(this.followers == 1){
-        document.getElementById('Follow').innerText = 'Unfollow'
-        
+      let followbtn = document.getElementById('Follow');
+      if(followbtn.innerText == 'Follow'){
+        this.followers++;
+        followbtn.innerText = 'Unfollow' 
+      }else{
+        this.followers--;
+        followbtn.innerText = 'Follow' 
       }
       
     },
@@ -83,9 +83,17 @@ export default {
     //     document.getElementById('disabled').removeAttribute('disabled','disabled')
     //   }
     // }
+  },
+  // LIFE CICLE HOOK 
+  //key Mounted => can be used to run code after the component has finished the initial rendering and created the DOM nodes
+  // The first data rendering will be the MOUNTED HOOK on the DOM
+  // THE FIRST ELEMENT THAT WILL BE RENDERING ON THE DOM BY DEFAULT 
+  mounted(){
+    this.Follow()
   }
 }
 </script>
+
 
 <!-- CSS -->
 <style>

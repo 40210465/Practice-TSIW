@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipCard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    
+
+    <div id="container-app" v-cloak>
+      <!-- GAME FLIP CARD-->
+        <!-- ON CLICK  -->
+          <div class="message">{{messageERROR}}</div>
+        <div class="container-game">
+          <div class="scene-01 scene--card">
+            <div @click="FlipCard01" class="card-01">
+              <div  @click="FlipBackCard01"  class="card__face-01 card__face--front-01"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div @click="BackCard01" class="card__face-01 card__face--back-01"></div>
+            </div>
+          </div>
+          
+          <div class="scene-02 scene--card">
+            <div @click="FlipCard02" class="card-02">
+              <div  @click="FlipBackCard02" class="card__face-02 card__face--front-02"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard02" class="card__face-02 card__face--back-02"></div>
+            </div>
+          </div>
+          <div class="scene-03 scene--card">
+            <div @click="FlipCard03" class="card-03">
+              <div @click="FlipBackCard03"  class="card__face-03 card__face--front-03"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard03" class="card__face-03 card__face--back-03"></div>
+            </div>
+          </div>
+          <div class="scene-04 scene--card">
+            <div @click="FlipCard04" class="card-04">
+              <div  @click="FlipBackCard04" class="card__face-04 card__face--front-04"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard04" class="card__face-04 card__face--back-04"></div>
+            </div>
+          </div>
+          <div class="scene-05 scene--card">
+            <div @click="FlipCard05" class="card-05">
+              <div @click="FlipBackCard05"  class="card__face-05 card__face--front-05"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard05" class="card__face-05 card__face--back-05"></div>
+            </div>
+          </div>
+          <div class="scene-06 scene--card">
+            <div @click="FlipCard06" class="card-06">
+              <div @click="FlipBackCard06"  class="card__face-06 card__face--front-06"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard06" class="card__face-06 card__face--back-06"></div>
+            </div>
+          </div>
+          <div class="scene-07 scene--card">
+            <div @click="FlipCard07" class="card-07">
+              <div @click="FlipBackCard07"  class="card__face-07 card__face--front-07"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard07" class="card__face-07 card__face--back-07"></div>
+            </div>
+          </div>
+          <div class="scene-08 scene--card">
+            <div @click="FlipCard08" class="card-08">
+              <div @click="FlipBackCard08"  class="card__face-08 card__face--front-08"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard08" class="card__face-08 card__face--back-08"></div>
+            </div>
+          </div>
+          <div class="scene-09 scene--card">
+            <div @click="FlipCard09" class="card-09">
+              <div @click="FlipBackCard09" class="card__face-09 card__face--front-09"><img class="question-icon" src="/img/question-icon.svg"></div>
+              <div  @click="BackCard09" class="card__face-09 card__face--back-09"></div>
+            </div>
+          </div>
+          </div>
+    </div>
+
+     <!-- VUE FRAMEWORK -->
+     <script src="https://unpkg.com/vue@3"></script>
+
+     <script>
+        let app = Vue.createApp({
+    
+         //KEY DATA
+     data (){
+         //TO RETURN KEYS OBJECT 
+         // this => is the shortcut for the object with the keys
+         return {                
+             //GAME CLICK BOX
+             // LETTERS TO BE SHOW ON THE FLIPPER CARDS
+             contentLetters : ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','W','Y','Z'],
+             //COUNTERS OF CLICKS FOR EACH CARD
+             clicksFlipCard01: 0,
+             clicksFlipCard02: 0,
+             clicksFlipCard03: 0,
+             clicksFlipCard04: 0,
+             clicksFlipCard05: 0,
+             clicksFlipCard06: 0,
+             clicksFlipCard07: 0,
+             clicksFlipCard08: 0,
+             clicksFlipCard09: 0,
+             //MESSAGE ERROR
+             messageERROR : "YOU CAN FLIP ONLY TWICE 2X"
+           }
+     },
+     //KEY METHODS
+     // METHODS FOR EVENTS HANDLER FOR FLIPPING CARDS
+     methods :{
+       // TO FLIP THE CARD ON TOGGLE
+         FlipCard01(event){
+           document.querySelector('.card-01').classList.toggle('is-flipped-01');         
+         },
+         FlipCard02(event){
+           document.querySelector('.card-02').classList.toggle('is-flipped-02');
+         },
+         FlipCard03(event){
+           document.querySelector('.card-03').classList.toggle('is-flipped-03');
+         },
+         FlipCard04(event){
+           document.querySelector('.card-04').classList.toggle('is-flipped-04');
+         },
+         FlipCard05(event){
+           document.querySelector('.card-05').classList.toggle('is-flipped-05');
+         },
+         FlipCard06(event){
+           document.querySelector('.card-06').classList.toggle('is-flipped-06');
+         },
+         FlipCard07(event){
+           document.querySelector('.card-07').classList.toggle('is-flipped-07');
+         },
+         FlipCard08(event){
+           document.querySelector('.card-08').classList.toggle('is-flipped-08');
+         },
+         FlipCard09(event){
+           document.querySelector('.card-09').classList.toggle('is-flipped-09');
+         },
+         //TO GENERATE RANDOM LETTERS ON FLIP ON THE BACK CARD
+         FlipBackCard01(event){
+           this.clicksFlipCard01++
+           console.log(this.clicksFlipCard01)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-01')
+           cardback.innerHTML = randomLetter
+         },
+         FlipBackCard02(event){
+           this.clicksFlipCard02++
+           console.log(this.clicksFlipCard02)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-02')
+           cardback.innerHTML = randomLetter
+         
+         },
+         FlipBackCard03(event){
+           this.clicksFlipCard03++
+           console.log(this.clicksFlipCard03)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-03')
+           cardback.innerHTML = randomLetter
+         
+         },
+         FlipBackCard04(event){
+           this.clicksFlipCard04++
+           console.log(this.clicksFlipCard04)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-04')
+           cardback.innerHTML = randomLetter
+          
+         },
+         FlipBackCard05(event){
+           this.clicksFlipCard05++
+           console.log(this.clicksFlipCard05)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-05')
+           cardback.innerHTML = randomLetter
+       
+         },
+         FlipBackCard06(event){
+           this.clicksFlipCard06++
+           console.log(this.clicksFlipCard06)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-06')
+           cardback.innerHTML = randomLetter
+        
+         },
+         FlipBackCard07(event){
+           this.clicksFlipCard07++
+           console.log(this.clicksFlipCard07)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-07')
+           cardback.innerHTML = randomLetter
+         
+         },
+         FlipBackCard08(event){
+           this.clicksFlipCard08++
+           console.log(this.clicksFlipCard08)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-08')
+           cardback.innerHTML = randomLetter
+          
+         },
+         FlipBackCard09(event){
+           this.clicksFlipCard09++
+           console.log(this.clicksFlipCard09)
+           let random = Math.floor(Math.random() * this.contentLetters.length);
+           let randomLetter = this.contentLetters[random]
+           let cardback = document.querySelector('.card__face--back-09')
+           cardback.innerHTML = randomLetter
+      
+         },
+         BackCard01(event){
+           let divMessage = document.querySelector('.message');
+             if(this.clicksFlipCard01 == 2){
+               document.querySelector('.card-01').classList.remove('is-flipped-01')
+              divMessage.style.opacity = '1'; 
+              divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard02(event){
+                  let divMessage = document.querySelector('.message');
+                  if(this.clicksFlipCard02 == 2){
+                      document.querySelector('.card-02').classList.remove('is-flipped-02')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard03(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard03 == 2){
+                      document.querySelector('.card-03').classList.remove('is-flipped-03')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard04(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard04 == 2){
+                      document.querySelector('.card-04').classList.remove('is-flipped-04')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard05(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard05 == 2){
+                      document.querySelector('.card-05').classList.remove('is-flipped-05')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard06(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard06 == 2){
+                      document.querySelector('.card-06').classList.remove('is-flipped-06')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard07(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard07 == 2){
+                      document.querySelector('.card-07').classList.remove('is-flipped-07')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard08(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard08 == 2){
+                      document.querySelector('.card-08').classList.remove('is-flipped-08')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                },
+                BackCard09(event){
+                  let divMessage = document.querySelector('.message');
+                    if(this.clicksFlipCard09 == 2){
+                      document.querySelector('.card-09').classList.remove('is-flipped-09')
+                     divMessage.style.opacity = '1'; 
+                     divMessage.animate([{opacity:0},{opacity:1}],{duration:450}) // transition animation duration 350ms for opacity 1 ITS VISIBLE
+                      //SET TIMEOUT TO GIVE A TIME TO THE MESSAGE BY CLEAN FROM THE SCREEN
+                      setTimeout(()=>{
+                        divMessage.style.opacity = '0'
+                        divMessage.animate([{opacity:1},{opacity:0}],{duration:450}) //transition animation duration 450ms for opacity 0 NOT VISIBLE
+                      },1600)
+                    }
+                }
+              }
+           });
+        app.mount('#container-app')
+        </script>
+</body>
+</html>

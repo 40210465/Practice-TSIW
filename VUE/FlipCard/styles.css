@@ -1,0 +1,391 @@
+[v-cloak]{
+    display: none;
+}
+
+
+#container-app{
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+.container-game{
+  display:grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-rows: 3fr 3fr 3fr;
+  gap: 5em;
+}
+/* 1 */
+.scene-01 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-01 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-01.is-flipped-01 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-01 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-01 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-01 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 2 */
+.scene-02 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-02 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-02.is-flipped-02 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-02 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-02 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-02 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 3 */
+.scene-03 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-03 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-03.is-flipped-03 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-03 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-03 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-03 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 4 */
+.scene-04 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-04 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-04.is-flipped-04 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-04 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-04 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-04 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 5 */
+.scene-05 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-05 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-05.is-flipped-05 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-05 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-05 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-05 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 6 */
+.scene-06 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-06 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-06.is-flipped-06 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-06 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-06 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-06 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 7 */
+.scene-07 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-07 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-07.is-flipped-07 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-07 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-07 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-07 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 8 */
+.scene-08 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-08 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-08.is-flipped-08 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-08 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-08 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-08 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+/* 9 */
+.scene-09 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+.card-09 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+.card-09.is-flipped-09 {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.card__face-09 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 30px;
+  backface-visibility: hidden;
+}
+.card__face--front-09 {
+  background: black;
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.card__face--back-09 {
+  background: #B07946;
+  transform: rotateY(180deg);
+  box-shadow: 0px 4px 22px 8px rgba(1, 1, 1, 0.6);
+}
+.question-icon{
+  height: 40px
+}
+.message{
+  opacity: 0;
+  padding: 10px 10px;
+  font-size : 20px;
+  font-weight: bolder;
+  color: #FFF;
+  border-radius: 12px;
+  background-color: #B05346;
+}
