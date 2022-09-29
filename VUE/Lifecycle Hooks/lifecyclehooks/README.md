@@ -1,4 +1,4 @@
-# life_cycle_hooks
+# lifecyclehooks
 
 ## Project setup
 ```
