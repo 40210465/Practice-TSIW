@@ -4,9 +4,9 @@
         
         <form>
 
-            <input type="text" id="username" required placeholder="Username">
-            <input type="password" id="password" required placeholder="*******">
-            <input type="submit" value="Login" id="LoginSubmission" @click.prevent.stop>
+            <input type="text" id="username" v-model="this.username" required placeholder="Username">
+            <input type="password" id="password" v-model="this.password" required placeholder="*******">
+            <input type="submit" value="Login" id="LoginSubmission" @click="formSubmission">
             
         </form>
 
@@ -20,10 +20,24 @@
       name: 'loginFrom' ,
       props: {
         msg: String
+     
       },
+      data(){
+        return{
+          username:[] ,
+          password: []
+        }
+      },
+      beforeUpdate(){
+  console.log('beforeUpdate Login component');
+},
+updated(){
+  console.log('updated Login component');
+},
       methods:{
-        preventLoginFormSubmission(e){
-            e.preventDefault();
+        formSubmission(e){
+          e.preventDefault();
+          console.log(`${this.username} ${this.password}`);
         }
       }
     }

@@ -47,9 +47,10 @@ in the same file :
 <style></style> CSS
 ------------------------------------------------------------------------------
 
+vue course timeline
 https://www.youtube.com/watch?v=ZqgiuPt5QZo&list=PLvEpsAz1iddQaMLerXEn2ZLhnnEJk-EEZ&index=164&t=1840s
 
 life cycle hooks in depth
-https://www.youtube.com/watch?v=bWHJeIzVCqA
+https://www.youtube.com/watch?v=bWHJeIzVCqA&t=1050s   update stage
 
 
