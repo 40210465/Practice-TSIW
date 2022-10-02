@@ -1,18 +1,21 @@
+<!-- MAIN COMPONENT -->
 <!-- SINGLE FILE COMPONENT -->
 
 <!-- HTML -->
 <template>
 
 <div id="app-container">
-
- @{{ user.userName }} - {{fullName}}
+<div class="info_user">
+ @{{ this.user.userName }} - {{fullName}}
       <span class="followers"> <strong>Followers :</strong>{{this.followers}}</span>&ensp;
-
+    </div>
   <!-- WE CAN TRIGGER EVENTS IN TWO WAYS : @eventName="method_property" OR v-on:eventName="method_property" -->
+    <div class="buttons-container">
   <button id="Follow"  @click="Follow">Follow</button>
+  <button id="changeUser" @click="changeUsername">Change Username</button>
   &ensp;
+</div>
   <!-- <button disabled id="disabled" @click="Unfollow">Unfollow</button> -->
-  
 
 </div>  
 
@@ -20,6 +23,8 @@
 
 <!-- JS -->
 <script>
+
+
 
 
 // ALL THE DATA FROM THE OBJECT WILL BE EXPORTED/RETURNED INTO THE TEMPLATE ABOVE
@@ -45,6 +50,20 @@ export default {
     }
   }
 },
+
+
+
+  // WHEN SOME DATA FROM THE OBJECT CHANGES THE FUNCTION WILL RUN INSIDE THE WATCH
+  // WATCH IF SOMETHING WAS CHANGE ? IFtrue console.log('The user was change') : IFfalse console.log('The user is the current')
+  watch:{
+    followers(newfollower, oldfollower){
+      if(oldfollower < newfollower){
+        console.log(`${this.user.userName} was received on follower !!`);
+      }
+    }
+  },
+
+  
 // KEY computed
   // COMPUTED CACHING VS METHODS properties
   //COMPUTED properties are cached on their reactive dependencies. A computed property will only re-evaluate when some of its reactive dependices have changed
@@ -83,15 +102,37 @@ export default {
     //     document.getElementById('disabled').removeAttribute('disabled','disabled')
     //   }
     // }
+
+    changeUsername(){
+     let checkChangedUserName = prompt('Change the username')
+      
+     if(checkChangedUserName === null || checkChangedUserName === ''){
+      this.user.userName === this.user.userName
+      console.log(this.user);
+    } 
+    else{
+      this.user.userName = checkChangedUserName
+      console.log(this.user);
+      alert(`The username was changed to ${this.user.userName}`)
+    }
+
+    }
   },
-  // LIFE CICLE HOOK 
-  //key Mounted => can be used to run code after the component has finished the initial rendering and created the DOM nodes
-  // The first data rendering will be the MOUNTED HOOK on the DOM
-  // THE FIRST ELEMENT THAT WILL BE RENDERING ON THE DOM BY DEFAULT 
+
+  // LIFE CICLE HOOK
+  // EXAMPLE OF LIFE CYCLE HOOK OF A COMPONENT WITH MOUNT PHASE 
+  //key Mounted => can be used to run code after the component has finished the initial rendering and created the DOM node
+  // WHEN TO COMPONENT HIS MOUNTED WILL TRIGGER THIS FUNCTION
   mounted(){
     this.Follow()
-  }
+  },
+  // WILL TRIGGER WHEN SOME DATA ON THE COMPONENT IS CHANGED/UPDATING
+  updated(){
+    console.log('was updated');
+  },
+  // ----------------------------------------------------------------------------------------------------------------------------
 }
+
 </script>
 
 
@@ -106,9 +147,28 @@ export default {
 }
 
 #app-container{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+
+.info_user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
 </style>

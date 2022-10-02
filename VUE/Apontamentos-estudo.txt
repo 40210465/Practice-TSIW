@@ -48,13 +48,9 @@ in the same file :
 ------------------------------------------------------------------------------
 
 vue course timeline
-https://www.youtube.com/watch?v=ZqgiuPt5QZo&list=PLvEpsAz1iddQaMLerXEn2ZLhnnEJk-EEZ&index=164&t=1840s
+https://youtu.be/ZqgiuPt5QZo?list=PLvEpsAz1iddQaMLerXEn2ZLhnnEJk-EEZ&t=2124s
+
 
 Review this after learning the basics of Routing on the vue course
 life cycle hooks in depth
 https://www.youtube.com/watch?v=bWHJeIzVCqA&t=1050s   
-
-router-link vs anchor(a) tag for links
-
-= with the router-link the url link is instantly previewed on the page without reloading the page
-= with the anchor tag will reload the page to the url link and previewing
