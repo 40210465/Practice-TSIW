@@ -29,7 +29,7 @@ atributos => ``código``* e nome
 entidade = Assunto |
 atributos => ``código``* e descrição
 
-![entidades_atributos](/Entidades_atributos.png)
+<img src="Entidades_atributos.png">
 
 -----------------------------------------------------------
 
@@ -57,7 +57,8 @@ PK = ``Primary Key``(chave primária)/atributo identificador
 * 3º passo = representar as entidades e os seus respetivos atributos no modelo
 
 representação das entidades e dos respetivos atributos :
-![](/representa%C3%A7%C3%A3o%20das%20entidades.png)
+
+<img src="representação das entidades.png">
 
 ----------------------------------------------
 
@@ -67,14 +68,15 @@ nota : o minímo é sempre 0 quando representado unicamente `n` ou `1` na sua ca
 
 cardinalidade na engenharia :
 
-![](/Rpresenta%C3%A7%C3%A3o%20da%20cardinalidade%20em%20engenharia%20software(informa%C3%A7%C3%A3o)%2002.png)
+<img src="Rpresentação da cardinalidade em engenharia software(informação) 02.png">
 
 
 
+<img src="Rpresentação da cardinalidade em engenharia software(informação).png">
 
-![](/Rpresenta%C3%A7%C3%A3o%20da%20cardinalidade%20em%20engenharia%20software(informa%C3%A7%C3%A3o).png)
 
 
 * Representação dos relacionamentos e cardinalidades entre as entidades :
 
-![](/representa%C3%A7%C3%A3o%20dos%20relacionamentos%20e%20cardinalidades%20entre%20entidades.png)
+
+<img src="representação dos relacionamentos e cardinalidades entre entidades.png">
