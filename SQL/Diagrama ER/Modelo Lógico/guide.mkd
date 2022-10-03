@@ -1,0 +1,7 @@
+## Num modelo lógico as entidades se transformam em tabelas e os seus respetivos atributos se transformam em colunas
+
+-----
+* exemplo :
+
+![](/Relacionamento%20(1%2C1)%20-%20(0%2Cn)%20com%20atributo%20na%20conex%C3%A3o.png)
+
