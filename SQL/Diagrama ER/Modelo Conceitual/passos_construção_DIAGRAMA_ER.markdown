@@ -8,7 +8,7 @@
 
 Enunciado problema `Base de Dados Biblioteca`
 
-![enunciado](/Enunciado.png)
+<img src="Enunciado.png">
 
 ----------------------
 
