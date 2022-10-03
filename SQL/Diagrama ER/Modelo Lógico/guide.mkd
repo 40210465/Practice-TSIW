@@ -3,5 +3,4 @@
 -----
 * exemplo :
 
-![](/Relacionamento%20(1%2C1)%20-%20(0%2Cn)%20com%20atributo%20na%20conex%C3%A3o.png)
-
+<img src="Relacionamento (1,1) - (0,n) com atributo na conexão.png">
