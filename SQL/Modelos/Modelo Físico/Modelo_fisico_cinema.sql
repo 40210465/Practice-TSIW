@@ -99,3 +99,6 @@ JOIN filmes AS f ON pre.F_ID = f.ID
 JOIN premios AS p ON pre.P_Cod = p.Cod;
 
 -- TO RETURN THE MOVIE AND THE AWARDS NAMES INSTEAD THERE ID´S
+
+-- --------------------------------------------------------------------------------------
+

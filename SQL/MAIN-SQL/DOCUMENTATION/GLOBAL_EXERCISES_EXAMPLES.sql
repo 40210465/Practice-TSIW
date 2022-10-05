@@ -35,3 +35,32 @@ ORDER BY oi.quantity * SUM(oi.unit_price);
 SELECT quality_note, COUNT(quality_note) AS quality_note_quantity
 FROM quality_product
 GROUP BY quality_note;
+
+-- ----------------------------------------------------------------------------------------------
+-- WRITE A QUERY TO RETURN BOUTH CONDITIONS
+
+-- CONDITION 1 : departamento_codigo = 40
+-- CONDITION 2: Salario > 500,00
+
+-- AND
+SELECT * FROM clientes
+WHERE 
+Departamento_Codigo = 40 
+AND
+Salario > 500.00;        
+
+-- OR
+SELECT * FROM clientes
+WHERE 
+Departamento_Codigo = 40 
+OR
+Salario > 500.00;   
+
+-- TO RETURN ONLY THE EMPLOYYERS THAT DON´T WORKS ON THE 10 OR 30 DEPARTMENT
+SELECT * FROM clientes
+WHERE Departamento_Codigo NOT IN
+( 10,30);
+
+-- Return only the employers with the salary between 250 and 800
+SELECT * FROM clientes
+WHERE Salario BETWEEN 250 AND 800;
