@@ -1,51 +1,8 @@
-before follow the steps you will have to have on your computer nodeJS
-open your preference IDE(Integrated Devolpment Environment):
-- Visual Studio Code
 
-LINK DOWNLOAD
-> https://nodejs.org/en/
----------------------------------------------------------------------
-1º
--nmp install -g @vue-cli
-node package manager installed globally the vue-cli
---------------------------------------------------------------------
-2º
-open the GUI of VUE to create your project and to start developing
-by inserting the command on the CMD windows or in a terminal of a ID for instance
-VSCODE : 
-
-> vue ui 
---------------------------------------------------------------------
-
-3º
-create a project in a folder and follow the steps:
-
-- name your folder project
-
-- select the managment package (npm, yarn, pnpm)
-
-- turn on the 'scaffold project without beginner instructions'
-
-- turn off initialize git repository if you have already one otherwise turn on
-
-- SELECT ONE PRESET : select Vue3
-
-NOW your project folder is ready and organize with a preset folders/files structure
-
------------------------------------------------------------------------
-4º
-run the task serve in order to run your app 
-on the output we can run your app on local or network option
-------------------------------------------------------------------------
-app.vue IT´S THE MAIN FILE, IT HOLDS ALL THE APP YOUR CREATING 
-
-=> Every Vue file haves a single file component, each means we work HTML CSS AND JS
-in the same file : 
-
-<template></template> HTML
-<script></script> JS
-<style></style> CSS
-------------------------------------------------------------------------------
+Rever:
+	() template conditions
+	() template loops
+	() template events
 
 vue course timeline
 https://youtu.be/ZqgiuPt5QZo?list=PLvEpsAz1iddQaMLerXEn2ZLhnnEJk-EEZ&t=2124s

@@ -5,16 +5,40 @@
    
  <div class="profile-container">
     <div class="profile-name">
-        <span class="fullname">{{fullName}}</span>
+         <span class="fullname">{{fullName}}</span>
         <span class="username">@{{user.userName}}</span>
     </div>
-    <div class="followers-counter">
+
+  
+    <!-- CONDITIONS - LOOPS - EVENTS -->
+
+    <!-- TEMPLATE CONDITIONS -->
+    <!-- V-IF CONDITIONS  -->
+    <!-- if isAdmin is true will display otherwise will not be displayed -->
+    
+    <div v-if="user.isAdmin" class="admin-badge">  
+        Admin
+      </div>
+      <div v-else class="admin-badge"> 
+        user
+      </div>
+   
+      <div class="followers-counter">
         <span class="Followers">Followers</span>
         <span class="followers-count">{{this.followers}}</span>
       </div>
     <div class="buttons-container">
-        <button id="Follow" @click="Follow">Follow</button>
-        <button @click="changeUsername">Change username</button>
+        <button id="Follow" class="Followbtn" @click="Follow">Follow</button>
+        <button class="changeuserbtn" @click="changeUsername">Change username</button>
+    </div>
+ </div>
+
+
+ <!-- TEMPLATE LOOPS -->
+ <div class="user-messages-container">
+    <!-- WITH V-FOR WILL RENDER ALL THE CONTENT INSIDE THE ARRAY MESSAGES -->
+  <div class="user-message" v-for="message in user.messages"  :key="message.id">
+    {{message.content}}
     </div>
  </div>
 
@@ -46,7 +70,12 @@ export default {
       age: 21,
       email : 'pedromst2000@gmail.com',
       // TO CHECK IF HIS THE ADMIN OF THE APPLICATION 
-      isAdmin: true
+      isAdmin: true,
+      isUser : false, 
+      messages : [
+            {id:1, content:'Amazing social network'}, //0
+            {id:2, content:'Awesome content'} //1
+      ]
     }
   }
 },
@@ -139,6 +168,8 @@ computed:{
   background: #E5ECEED9;
   box-shadow: 0px 3px 7px 6px #00000080;
   border-radius: 12px;
+  height: 40vh;
+  width: 30vw;
 }
 
 .profile-name{
@@ -161,6 +192,68 @@ computed:{
   justify-content: center;
   align-items: center;
   gap: 1em;
+}
+
+.fullname{
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.username{
+  font-size: 14px;
+}
+
+.Followers{
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.followers-count{
+  font-weight:regular;
+}
+
+.buttons-container button{
+  border:none;
+  background: rgba(152, 79, 148, 0.93);
+  color: #ffff;
+  font-weight: bolder;
+}
+
+.Followbtn{
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+.Followbtn{
+  transition: 350ms ease-in-out;
+}
+
+.Followbtn:hover{
+  cursor: pointer;
+  background: rgba(152, 79, 148, 0.53);
+}
+
+/* --- */
+.changeuserbtn{
+  transition: 350ms ease-in-out;
+  border-radius: 3px;
+}
+
+.changeuserbtn:hover{
+  cursor: pointer;
+  background: rgba(152, 79, 148, 0.53);
+}
+
+.admin-badge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  background-color: rgba(152, 79, 148, 0.93);
+  border-radius: 12px;
+  padding: 2px 20px;
+  color: #ffff;
 }
 
 </style>
