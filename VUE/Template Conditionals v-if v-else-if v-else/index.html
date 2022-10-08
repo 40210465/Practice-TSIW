@@ -7,16 +7,42 @@
     <title>Template Conditionals</title>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
+
+<style>
+
+.message-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+
+
+</style>
+
 <body>
     
-    <div id="app"></div>
+<!-- creating a program with V-IF that tracks if the message is number data type or not -->
+<!-- IF IS NUMBER WILL BE DISPLAY AND RETURN TRUE OTHERWISE WILL NOT BE DISPLAYED ON THE DOM AND RETURNING FALSE -->
+
+    <div id="app">
+      <div class="message-container">
+        <div class="message01" v-if="this.isNumber">10</div>
+        <div class="message02" v-if="this.isNumber">20</div>
+        <!-- if is not number will not be displayed -->
+        <div class="message03" v-else-if="!isNumber">trinta</div>
+        <div class="message04" v-if="this.isNumber">40</div>
+      </div>
+    </div>
     
     <script>
   let app = Vue.createApp({
-
+     
     data() {
         return {
-            
+          isNumber: true
         }
     },
 
