@@ -1,0 +1,103 @@
+#App{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-comment{
+    display: flex;
+    gap: 2em;
+}
+
+.comments-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    flex-wrap: wrap;
+}
+
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#comment{
+    /* padding :  Y - vertical  X - horizontal  */
+    padding: 10px 40px;
+    border-radius: 32px;
+    border-color: rgba(0, 0, 0, 0.1);
+    transition: 850ms ease-in-out;
+    letter-spacing: 2px;
+}
+
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.message{
+    margin-left: -15px;
+    color: red;
+    font-size: 14px;
+    opacity: 0;
+}
+
+#comment:focus{
+    background-color: black;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.comment{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+button{
+    border: none;
+    background-color:black;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    border-radius: 118px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    transform: translateY(-32%);
+
+}
+
+button:hover{
+    background: #000000AD;
+    cursor: pointer;
+
+}
+
+.comment{
+    background: #000000AD;
+    color: #ffff;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px 20px;
+    border-radius: 8px;
+}
+
+.message-comment{
+    letter-spacing: 2px;
+    color: red;
+    font-weight: bolder;
+    opacity: 0;
+}

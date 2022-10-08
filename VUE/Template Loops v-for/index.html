@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Loops</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="vue.css">
+</head>
+<body>
+    
+
+    <div id="App">
+        <!-- this references the vue object -->
+        
+        <div class="comments-container-wrapper">
+        <div class="input-comment">
+                <div class="input-container">
+            <input id="comment" type="text" placeholder="awesome content...">
+                <span class="message">{{this.COMMENT_ERROR}}</span>
+        </div>
+            <button  @click="AddComment">Add Comment</button>
+        </div>
+
+
+        <div class="comments-container">
+            <!-- will increment the div comment by looping the array comments for instance if there is 2 items
+            then will display two divs -->
+            <!-- WILL RETURN ALL THE ITEMS FROM THE ARRAY COMMENTS  -->
+            <div class="comment" v-for="comment in this.comments" :key="comment.id">
+               <!-- will return all content keys from the OBJECT ARRAY comments -->
+                {{comment.content}}
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="/vue.js"></script>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 
 Rever:
 	() template conditions
-	() template loops
+	(x) template loops
 	() template events
 
 vue course timeline
