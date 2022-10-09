@@ -1,12 +1,8 @@
 
-Rever:
-	() template conditions
-	(x) template loops
-	() template events
+
 
 vue course timeline
-https://www.youtube.com/watch?v=ZqgiuPt5QZo&list=PLvEpsAz1iddQaMLerXEn2ZLhnnEJk-EEZ&t=3124s
-
+https://www.youtube.com/watch?v=ZqgiuPt5QZo&t=3000s
 
 Review this after learning the basics of Routing on the vue course
 life cycle hooks in depth
