@@ -64,3 +64,5 @@ WHERE Departamento_Codigo NOT IN
 -- Return only the employers with the salary between 250 and 800
 SELECT * FROM clientes
 WHERE Salario BETWEEN 250 AND 800;
+-- ----------------------------------------------------------------------------------
+
