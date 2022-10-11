@@ -82,13 +82,27 @@ WHERE filmes.Título REGEXP '[a-o]'; -- contains vowels aeiou in a range [a-o]
 
 
 -- RETURN THE SMALLEST TITLE MOVIE
-
+SELECT filmes.Título 
+FROM filmes 
+ORDER BY LENGTH(filmes.Título)
+LIMIT 1;
 
 -- RETURN THE BIGGEST TITLE MOVIE
-
+SELECT filmes.Título 
+FROM filmes 
+ORDER BY LENGTH(filmes.Título) DESC
+LIMIT 1;
 
 -- RETURN THE TOTAL SALARY FROM THE 40 DEPARTMENT
-
+SELECT DISTINCT c.Departamento_Codigo, d.departamento, SUM(c.Salario) AS 'salario_total'
+FROM clientes AS c
+JOIN departamentos AS d ON c.Departamento_Codigo = d.Codigo 
+WHERE c.Departamento_Codigo = 40;
 
 -- ORDER BY THE DEPARTMENTS BY HIS TOTAL SALARY
 -- return with the follow pattern [nome_departamento, salario_total]
+SELECT c.Departamento_Codigo, d.departamento AS 'nome_departamento', SUM(c.Salario) AS 'salario_total'
+FROM clientes AS c
+JOIN departamentos AS d ON c.Departamento_Codigo = d.Codigo
+GROUP BY nome_departamento
+ORDER BY salario_total DESC;
