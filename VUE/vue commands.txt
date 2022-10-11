@@ -1,0 +1,4 @@
+github = verificação de estudante para ter acesso ao github copilot versão gratuita
+
+-npm run dev => para preview do projeto no browser conectado a um local host server
+

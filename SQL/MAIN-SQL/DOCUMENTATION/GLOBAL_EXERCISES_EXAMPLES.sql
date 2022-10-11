@@ -65,4 +65,30 @@ WHERE Departamento_Codigo NOT IN
 SELECT * FROM clientes
 WHERE Salario BETWEEN 250 AND 800;
 -- ----------------------------------------------------------------------------------
+-- RETURN HOW MUCH PERSONS HAVE A ODD AGE
+SELECT COUNT(persons.person_ID) AS 'Odd_age_persons'
+FROM persons
+WHERE age % 2 = 0;
 
+-- RETURN HOW MUCH MOVIES START WITH T
+SELECT COUNT(filmes.ID) AS 'Movies_start_with_T'
+FROM filmes
+WHERE filmes.Título REGEXP '^T'; -- STARTS WITH T with regexpressions
+
+-- RETURN ONLY THE MOVIES EACH CONTAINS VOWELS
+SELECT COUNT(filmes.ID) AS 'Movies_with_vowels'
+FROM filmes
+WHERE filmes.Título REGEXP '[a-o]'; -- contains vowels aeiou in a range [a-o]
+
+
+-- RETURN THE SMALLEST TITLE MOVIE
+
+
+-- RETURN THE BIGGEST TITLE MOVIE
+
+
+-- RETURN THE TOTAL SALARY FROM THE 40 DEPARTMENT
+
+
+-- ORDER BY THE DEPARTMENTS BY HIS TOTAL SALARY
+-- return with the follow pattern [nome_departamento, salario_total]

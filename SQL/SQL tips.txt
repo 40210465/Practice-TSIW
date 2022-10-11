@@ -1,0 +1,29 @@
+DBMS = DATABASE MANAGMENT SYSTEM
+
+OR
+
+IN SQL
+WITH RELATIONAL DATABASES
+
+RDBMS = RELATIONAL DATABASE MANAGMENT SYSTEM
+
+-----------------------------------------------------------
+SQL = STRUCRED QUERY LANGUAGE HAVES 4 TYPES OF LANGUAGE :
+
+=> DQL (Data Query Language)
+. Used to query the database for information
+. Get information that is already stored there
+
+
+=> DDL (Data Definition Language)
+. Used for defining database schemas (design of the database)
+
+
+=> DCL (Data Control Language)
+. Used for controlling acess to the data in the database
+. User and permissions management
+
+
+=> DML (Data Manipulation Language)
+. Used for inserting, updating and deleting data from the database
+
