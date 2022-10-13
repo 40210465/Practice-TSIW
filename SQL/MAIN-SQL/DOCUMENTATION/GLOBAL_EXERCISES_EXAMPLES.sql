@@ -106,3 +106,7 @@ FROM clientes AS c
 JOIN departamentos AS d ON c.Departamento_Codigo = d.Codigo
 GROUP BY nome_departamento
 ORDER BY salario_total DESC;
+-- ------------------------------------------------------------------------------------------------------------------
+
+
+
