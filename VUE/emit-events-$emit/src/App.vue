@@ -9,17 +9,16 @@
 
 <script>
 import FormLogin from './components/formLogin.vue';
+import RenderForm from './components/renderForm.vue';
 
   export default {
     name: "App",
-    components: { FormLogin}
+    components: { FormLogin, RenderForm }
 }
 </script>
 
 <style>
 
-*{
-  background-color: rgb(13, 12, 12);
-}
+
 
 </style>

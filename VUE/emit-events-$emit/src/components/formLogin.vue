@@ -2,35 +2,34 @@
   
         <form>      
         <div class="inputData">
-            <input class="username" type="text" placeholder="username">
-            <input class="password" type="password" placeholder="password**">
+            <input v-model="this.users.username" class="username" type="text" placeholder="username">
+            <input v-model="this.users.password" class="password" type="password" placeholder="password**">
         </div>
-        <!-- to bind the data from the formLogin component into the renderForm component -->
-        <!-- WITH BINDING AND PROPS WE CAN TRANSFER DATA FROM ONE COMPONENT TO THE OTHER-->
-        <RenderForm v-for="user in users" :key="user.id" :user="user" />      
+        <input class="submission" @click.prevent="addUser" type="submit" value="Add">    
         </form>
+
+        <RenderForm :users="users" :key="users.id"/>
 
 </template>
 
 <script>
 import RenderForm from "./renderForm.vue";
+
     
     export default {
     name: "formLogin",
-    components: { RenderForm },
-
     data() {
         return {
-            ID_user: 0,
-            users: [
-                { id: 1, username: "pedromst2000", password: "123pedro456" }
-            ]
+            ID_user: 1,
+            users: []
         };
     },
     methods: {
-        
+        addUser() {
+            this.users.push({id: this.ID_user++, username: this.users.username, password: this.users.password});
+        }
     },
-   
+    components: { RenderForm }
 }
 
 </script>
