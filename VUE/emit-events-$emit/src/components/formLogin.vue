@@ -3,7 +3,8 @@
         <form>      
         <div class="inputData">
             <input v-model="this.users.username" class="username" type="text" placeholder="username">
-            <input v-model="this.users.password" class="password" type="password" placeholder="password**">
+            <label for="password"></label>
+            <input v-model="this.users.password" id="password" class="password" type="password" placeholder="password**">
         </div>
         <input class="submission" @click.prevent="addUser" type="submit" value="Add">    
         </form>
@@ -109,7 +110,8 @@ import RenderForm from "./renderForm.vue";
     background: #41B883;
     box-shadow: inset 0px 4px 4px rgba(14, 2, 2, 0.64);
     transition: 550ms ease-in-out;
-  }
+    
+}
 
   .username:focus{
     background: #4677AA;
