@@ -1,6 +1,6 @@
 <template>
 
-<div form-container>
+<div class="form-container">
   <FormLogin/>
 </div>
 
@@ -9,16 +9,25 @@
 
 <script>
 import FormLogin from './components/formLogin.vue';
-import RenderForm from './components/renderForm.vue';
 
   export default {
     name: "App",
-    components: { FormLogin, RenderForm }
+    components: { FormLogin}
 }
 </script>
 
 <style>
 
+*{
+  background: rgb(0, 0, 0);
+}
 
+.form-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
 
 </style>

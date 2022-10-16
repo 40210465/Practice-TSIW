@@ -11,7 +11,7 @@
                 <th>username</th>
                 <th>password</th>
             </tr>
-            <tr v-for="user in users">
+            <tr id="userstr" v-for="user in users">
                 <td>{{user.id}}</td>
                 <td>{{user.username}}</td>
                 <td>{{user.password}}</td>
@@ -35,9 +35,6 @@
         },
 
         methods: {
-            Submission(username, password){
-                this.$emit('formSubmission', username, password)
-            }
         }
     }
 
@@ -48,5 +45,36 @@
 *{
     color:black;
 }
+
+
+table{
+    border: #fff;
+   border-collapse:collapse;
+   width:60%;
+}
+
+table tr,th,td{
+    padding:10px 10px;
+}
+
+table tr,th{
+    background: #41B883;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+table tr,td{
+    background: #35495E;
+    color: #fff;
+}
+
+#userstr:hover td{
+    cursor:pointer;
+    background: #6A90B8;
+
+
+
+}
+
 
 </style>
