@@ -28,26 +28,37 @@ import RenderForm from "./renderForm.vue";
     methods: {
         addUser() {
             
-            if(this.users.some((user) => user.username === user.username)){
+                console.log(this.users.password);
+
+            if(this.users.some((user) => this.users.username === user.username)){
                 alert(`The user ${this.users.username} already exists!! Try other`)
+                console.log(this.users);
             }
 
-           else if((this.users.username === undefined || this.users.username === '') && 
+        
+            else if((this.users.username === undefined || this.users.username === '') && 
             ((this.users.password === undefined || this.users.password === ''))) {
                 alert(`Please fill the inputfields !!`)
+                console.log(this.users);
             }
-
+            
             else if(this.users.username === undefined || this.users.username === ''){
                 alert(`Please fill a username !!`)
+                console.log(this.users);
             }
 
             else if(this.users.password === undefined || this.users.password === ''){
                 alert(`Please fill a password !!`)
+                console.log(this.users);
+            }
+        
+
+           else{
+                this.users.push({id: this.ID_user++, username: this.users.username, password: this.users.password});
+                console.log(this.users);
             }
 
-            else{
-                this.users.push({id: this.ID_user++, username: this.users.username, password: this.users.password});
-            }
+        
           
         }
     },

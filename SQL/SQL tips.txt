@@ -1,5 +1,5 @@
 SQL COURSE =>
-https://www.youtube.com/watch?v=HXV3zeQKqGY&t=7930s
+https://www.youtube.com/watch?v=HXV3zeQKqGY&t=9680s
 
 DBMS = DATABASE MANAGMENT SYSTEM
 
