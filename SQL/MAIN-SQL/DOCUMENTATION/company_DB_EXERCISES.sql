@@ -132,5 +132,86 @@ SELECT * FROM client;
 
 -- FIND ALL EMPLOYEES ORDERED BY SALARY
 SELECT * FROM employee
-ORDER BY salary ;
-        
+ORDER BY salary DESC;
+
+-- FIND ALL EMPLOYEES ORDERED BY SEX THEN NAME
+SELECT * FROM employee
+ORDER BY sex, first_name, last_name;
+
+-- FIND THE FIRST 5 EMPLOYEES IN THE TABLE
+SELECT * FROM employee LIMIT 5;
+
+-- FIND THE FIRST AND LAST NAMES OF ALL EMPLOYEES
+SELECT first_name, last_name
+FROM employee;
+
+-- FIND THE FORENAMES AND SURNAMS OF ALL EMPLOYEES
+SELECT first_name AS 'Forenames', last_name AS 'Surnames'
+FROM employee;
+
+-- FIND OUT ALL THE DIFFERENT GENDERS OF THE EMPLOYEES
+SELECT DISTINCT sex FROM employee;
+
+-- ----------------------------------------------------------------------------------------------
+
+-- Queries with AGGREGATIONS
+-- DATA AGGREGATIONS WITH AGGREGATE FUNCTIONS AVG /SUM/ MAX/ MIN/ COUNT AND WITH 'GROUP BY'
+
+-- FIND THE NUMBER OF EMPLOYEES
+SELECT COUNT(employee.emp_id) AS 'employees_quantity'
+FROM employee;
+
+-- FIND THE NUMBER OF EMPLOYEES WHO HAVES SUPERVISORS
+SELECT COUNT(employee.supervisor_id) AS 'employees_with_supervisors'
+FROM employee;
+
+-- FIND THE NUMBER OF FEMALE EMPLOYEES BORN AFTER 1970
+SELECT COUNT(employee.emp_id) AS '70s female_employees'
+FROM employee
+WHERE birth_date > '1971-01-01' AND sex = "F";
+
+-- FIND THE AVERAGE OF ALL EMPLOYEE´S SALARIES
+SELECT ROUND(AVG(employee.salary)) AS 'Average_salary'
+FROM employee;
+
+-- FIND THE SUM OF ALL EMPLOYEE´S SALARIES
+SELECT SUM(employee.salary) AS 'Total_salaries'
+FROM employee;
+
+-- FIND OUT HOW MANY MALES AND FEMALES THERE ARE ON THE COMPANY
+SELECT COUNT(sex) AS 'employees', sex AS 'gender'
+FROM employee
+GROUP BY sex;
+
+-- FIND THE TOTAL SALES OF EACH SALESMAN
+SELECT DISTINCT emp_id, SUM(total_sales) AS 'total_sales'
+FROM works_with
+GROUP BY emp_id;
+
+
+-- FIND OUT HOW MANY SUPPLIES EACH BRANCH HAVES
+
+-- FIND OUT HOW MANY CLIENTS EACH BRANCH HAVES
+ 
+-- RETURN HOW MANY FEMALES AND MALES SUPERVISORS THE COMPANY
+ 
+-- RETURN THE AVERAGE OF TOTAL_SALES
+
+-- -----------------------------------------------------------------------------------------
+
+-- ----------------------------------- WILDCARDS SQL ---------------------------------------
+
+-- -----------------------------------------------------------------------------------------
+
+-- ----------------------------------- UNION SQL -------------------------------------------
+
+-- -----------------------------------------------------------------------------------------
+
+-- -------------------------------------- JOINS --------------------------------------------
+
+-- -----------------------------------------------------------------------------------------
+
+-- ------------------------------------- SUBQUERIES ----------------------------------------
+-- ----------------------------------- NESTED QUERIES --------------------------------------
+
+-- -----------------------------------------------------------------------------------------
