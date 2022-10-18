@@ -188,14 +188,40 @@ SELECT DISTINCT emp_id, SUM(total_sales) AS 'total_sales'
 FROM works_with
 GROUP BY emp_id;
 
-
 -- FIND OUT HOW MANY SUPPLIES EACH BRANCH HAVES
+SELECT DISTINCT branch_id, COUNT(branch_id) AS 'branch_supplies_quantity'
+FROM branch_supplier
+GROUP BY branch_id;
 
 -- FIND OUT HOW MANY CLIENTS EACH BRANCH HAVES
+ SELECT branch_id, COUNT(client_id) AS 'clients'
+FROM client
+GROUP BY branch_id;
  
--- RETURN HOW MANY FEMALES AND MALES SUPERVISORS THE COMPANY
- 
+-- RETURN HOW MANY FEMALES AND MALES SUPERVISE THE COMPANY
+SELECT DISTINCT sex AS 'genders', COUNT(supervisor_id) AS 'Supervisors'
+FROM employee
+GROUP BY sex;
+
 -- RETURN THE AVERAGE OF TOTAL_SALES
+SELECT ROUND(AVG(total_sales)) AS 'average_total_sales'
+FROM works_with;
+
+
+-- RETURN FOR EACH EMPLOYEE THE TOTAL SALES
+SELECT DISTINCT emp_id, SUM(total_sales) AS 'total_sales'
+FROM works_with
+GROUP BY emp_id;
+
+-- RETURN FOR EACH CLIENT THE TOTAL_Sales
+SELECT DISTINCT client_id, SUM(total_sales) AS 'total_sales'
+FROM works_with
+GROUP BY client_id;
+
+-- RETURN HOW MANY CLIENTS EACH EMPLOYEE HAVES
+SELECT DISTINCT emp_id, COUNT(client_id) AS 'clients'
+FROM works_with
+GROUP BY emp_id;
 
 -- -----------------------------------------------------------------------------------------
 

@@ -3,7 +3,7 @@
         <form>      
         <div class="inputData">
             <input v-model="this.users.username" class="username" type="text" placeholder="username">
-            <label for="password"></label>
+            <!-- <label for="password"></label> -->
             <input v-model="this.users.password" id="password" class="password" type="password" placeholder="password**">
         </div>
         <input class="submission" @click.prevent="addUser" type="submit" value="Add">    

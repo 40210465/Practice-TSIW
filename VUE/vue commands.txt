@@ -2,3 +2,8 @@ github = verificação de estudante para ter acesso ao github copilot versão gr
 
 -npm run dev => para preview do projeto no browser conectado a um local host server
 
+----------------------------------------------------------------------------------
+
+
+npm init vue @latest
+
