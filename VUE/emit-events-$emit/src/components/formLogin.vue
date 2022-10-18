@@ -31,35 +31,25 @@ import RenderForm from "./renderForm.vue";
                 console.log(this.users.password);
 
             if(this.users.some((user) => this.users.username === user.username)){
-                alert(`The user ${this.users.username} already exists!! Try other`)
-                console.log(this.users);
+                alert(`The user ${this.users.username} already exists!! Try other`)                
             }
 
-        
             else if((this.users.username === undefined || this.users.username === '') && 
             ((this.users.password === undefined || this.users.password === ''))) {
                 alert(`Please fill the inputfields !!`)
-                console.log(this.users);
             }
             
             else if(this.users.username === undefined || this.users.username === ''){
                 alert(`Please fill a username !!`)
-                console.log(this.users);
             }
 
             else if(this.users.password === undefined || this.users.password === ''){
-                alert(`Please fill a password !!`)
-                console.log(this.users);
+                alert(`Please fill a password !!`)        
             }
         
-
            else{
-                this.users.push({id: this.ID_user++, username: this.users.username, password: this.users.password});
-                console.log(this.users);
-            }
-
-        
-          
+                this.users.push({id: this.ID_user++, username: this.users.username, password: this.users.password});        
+            }   
         }
     },
     components: { RenderForm }
