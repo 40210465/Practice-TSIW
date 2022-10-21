@@ -7,12 +7,10 @@
         <!-- data will be added to this table from the father component(formLogin) -->
         <table border="1">
             <tr>
-                <th>ID_user</th>
                 <th>username</th>
                 <th>password</th>
             </tr>
             <tr id="userstr" v-for="user in users">
-                <td>{{user.id}}</td>
                 <td>{{user.username}}</td>
                 <td>{{user.password}}</td>
             </tr>
@@ -31,10 +29,6 @@
             type: Object,
             required:true
         }
-      
-        },
-
-        methods: {
         }
     }
 
@@ -48,7 +42,7 @@
 
 
 table{
-    border: #fff;
+   border: #fff;
    border-collapse:collapse;
    width:60%;
 }
@@ -59,7 +53,7 @@ table tr,th,td{
 
 table tr,th{
     background: #41B883;
-    color: #fff;
+    color: #181818;
     letter-spacing: 2px;
 }
 
@@ -68,13 +62,10 @@ table tr,td{
     color: #fff;
 }
 
+
 #userstr:hover td{
     cursor:pointer;
     background: #6A90B8;
-
-
-
 }
-
 
 </style>

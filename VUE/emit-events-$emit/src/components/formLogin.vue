@@ -14,22 +14,21 @@
 </template>
 
 <script>
-import RenderForm from "./renderForm.vue";
 
+import RenderForm from "./renderForm.vue";
     
     export default {
     name: "formLogin",
     data() {
         return {
-            ID_user: 1,
-            users: []
+            // if don´t find any key users will return empty array 
+            users: JSON.parse(localStorage.getItem("users")) || []
         };
     },
+
     methods: {
         addUser() {
             
-                console.log(this.users.password);
-
             if(this.users.some((user) => this.users.username === user.username)){
                 alert(`The user ${this.users.username} already exists!! Try other`)                
             }
@@ -48,10 +47,17 @@ import RenderForm from "./renderForm.vue";
             }
         
            else{
-                this.users.push({id: this.ID_user++, username: this.users.username, password: this.users.password});        
+               this.users.push({ username: this.users.username, password: this.users.password})
+               localStorage.setItem('users', JSON.stringify(this.users))
             }   
-        }
+            
+        },
     },
+
+    created(){
+        localStorage.setItem('users', JSON.stringify(this.users))
+    },
+   
     components: { RenderForm }
 }
 
@@ -63,7 +69,7 @@ import RenderForm from "./renderForm.vue";
     }
 
     ::-webkit-input-placeholder{
-        color: white;
+        color: #0b3765;
         font-weight:bolder;
         letter-spacing: 5px;
     }
@@ -126,12 +132,14 @@ import RenderForm from "./renderForm.vue";
     border-radius:12px;
     padding: 10px 30px;
     background:#76D1A9;
-    transition: 550ms ease-in-out;
+    color: #0b3765;
+    transition: 550ms ease-in-out;  
 }
 
 .submission:hover{
     cursor: pointer;
     background: #6A90B8;
+    color: #fff;
 }
 
 </style>
