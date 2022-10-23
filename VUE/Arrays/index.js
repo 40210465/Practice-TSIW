@@ -22,7 +22,7 @@ const index = countries.indexOf(countries.length - 1);
 countries.splice(index, 1);
 console.log(countries);
 
-// -----------------------TO REMOVE SPECIF ITEM  -------------------------
+// -----------------------TO REMOVE ANY POSITION -------------------------
 let fruits = ["Apple", "Orange", "Pinneaple", "Strawberry", "banana"];
 // try to remove the pinneaple fruit from the list
 
@@ -31,6 +31,7 @@ const indexPinneaple = fruits.indexOf('Pinneaple'); //we can search by the item 
 // now with splice method we remove the specif item after the finding the index item to remove
 fruits.splice(indexPinneaple, 1);
 console.log(fruits);
+
 
 // WITH DOM EVENT
 let clubs = ["Benfica", "Porto", "Sporting", "Barcelona", "PSG"];
