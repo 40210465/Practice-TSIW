@@ -1,6 +1,6 @@
 //-------------------- REMOVING ITEM FROM ARRAY  ---------------------------------------
 
-// ----------------------------------------------------------------------------------
+            // --------------------------------------
 
 //------------------------- THE FIRST ITEM REMOVED ----------------------------------
 let cities = ["Madrid", "Lisbon", "Cairo", "London", "Turin", "Milan"];
@@ -52,3 +52,59 @@ document.getElementById('remove').onclick = ()=>{
         alert(`There isn´t any club called ${clubInput}`);
     }
 }
+
+// -----------------------------------------------------------------------------------------
+//-------------------------------------SORT ITEMS ARRAY-------------------------------------
+
+// ----------------------------------SORT STRINGS ARRAY----------------------------------
+let brands = ["Ford", "Audi", "Mercedes", "BMW", "Honda", "Nike","Adidas", "GIGABYTE"];
+brands.sort();
+console.log(brands);
+
+//------------- SORT ASCEND WAY
+brands.sort((previousBrand, currentBrand)=> previousBrand.localeCompare(currentBrand))
+console.log(brands);
+
+//-------------SORT DESCEND WAY
+brands.sort((previousBrand, currentBrand)=> currentBrand.localeCompare(previousBrand))
+console.log(brands);
+
+
+// ---------------------------------SORT INTEGER ARRAY-----------------------------
+
+//------------- SORT ASCEND WAY
+let ages = [20, 12, 7, 35, 42, 1, 78, 91, 4];
+ages.sort((previousAge, currentAge)=> previousAge - currentAge)
+console.log(ages);
+
+//-------------SORT DESCEND WAY
+ages.sort((previousAge, currentAge)=> currentAge - previousAge)
+console.log(ages);
+
+// RETURNING THE HIGHEST VALUE BY SORTING
+ages.sort((previousAge, currentAge)=> {previousAge - currentAge})
+console.log(ages[0]);
+
+// RETURN THE LOWEST VALUE BY SORTING
+ages.sort((previousAge, currentAge)=> previousAge - currentAge)
+console.log(ages[0]);
+
+// -------------------------SORT ARRAY OBJECT-----------------------------
+let persons = [
+    {name: "G", age:41},
+    {name: "C", age: 72},
+    {name: "F", age: 12 }
+]
+
+// RETURNING THE OLDEST PERSON
+persons.sort((previousAge, currentAge)=> currentAge.age - previousAge.age)
+console.log(`The oldest person is ${persons[0].name}`);
+
+// RETURNING THE YOUNGEST PERSON
+persons.sort((previousAge, currentAge)=> currentAge.age - previousAge.age)
+console.log(`The youngest person is ${persons[persons.length - 1].name}`);
+
+// -------------------------------------------------------------------------
+// SORT MOVIES BY RANKING 0-10
+// SORT MOVIES BY NAME
+
